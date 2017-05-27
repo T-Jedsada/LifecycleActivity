@@ -1,12 +1,10 @@
 package com.pondthaitay.lifecycleactivity
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
-import android.view.View
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
     var TAG: String = javaClass.simpleName
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,11 +41,5 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     override fun onDestroy() {
         super.onDestroy()
         Log.d(TAG, "onDestroy")
-    }
-
-    override fun onClick(v: View?) {
-        if (v?.id == R.id.btn_next) {
-            startActivity(Intent(this, Main2Activity::class.java))
-        }
     }
 }

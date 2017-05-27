@@ -7,3 +7,6 @@
 .externalNativeBuild
 .idea
 libs/
+
+.idea/instapk.xml
+instapk.log*
